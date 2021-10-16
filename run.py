@@ -5,10 +5,10 @@ ROSA Mathias
 Devoir maison d'informatique
 Convertisseur d’entiers : Octobre 2021
 
-Lancement du programme
+module : run.py
 """
 
-# Import de l'interface graphique
+# Import de l'interface graphique et des fonctions.
 from fonctions import convertir_vers_b10, convertir_dp_b10, verifier
 from interface_graphique import (fenetre, bouton_convertir, texte_entree,
                                  base_deux, base_cinq, base_dix, base_seize,
@@ -29,7 +29,7 @@ def convertir():
     frame_err.pack_forget()
     # On récupère l'entier depuis l'entrée utilisateur
     # On utilise la méthode upper prendre en charge le cas ou l'utilisateur
-    # utilise une
+    # rentre un entier en base 16 avec des minuscules
     entier = texte_entree.get().upper()
 
     # Les deux derniers caractères de var_bases.get() correspondent au numéro

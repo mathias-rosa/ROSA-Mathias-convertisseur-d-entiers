@@ -5,7 +5,7 @@ ROSA Mathias
 Devoir maison d'informatique
 Convertisseur d’entiers : Octobre 2021
 
-Interface Graphique
+module : interface_graphique.py
 """
 
 # Import de la bibliothèque Tkinter
@@ -14,14 +14,13 @@ from tkinter import ttk
 
 
 # =============================================================================
-# Variables Globales
+# Variables Globales de Couleurs
 # =============================================================================
 
 COULEUR_FOND = "#F3F4F5"
 COULEUR_TEXTE = "#191C1F"
 COULEUR_ACCENTUATION = "#EB5CAB"
 COULEUR_BLEU = "#0666EB"
-
 
 # =============================================================================
 # Création de la fentre et frame principale
@@ -65,9 +64,9 @@ bases_menu.pack(fill="x", ipady=5)
 # =============================================================================
 
 label_entree = Label(frame_principale, text="Quel entier souhaitez vous"
-                     " convertir ?",
-                     font="Abadi 12 bold", fg=COULEUR_ACCENTUATION,
-                     bg=COULEUR_FOND, justify="left", anchor="w")
+                     " convertir ?", font="Abadi 12 bold",
+                     fg=COULEUR_ACCENTUATION, bg=COULEUR_FOND, justify="left",
+                     anchor="w")
 label_entree.pack(fill="x", pady=5)
 
 texte_entree = StringVar()
@@ -101,7 +100,7 @@ frame_base_titre.columnconfigure(0, weight=3)
 frame_base_titre.columnconfigure(1, weight=1)
 
 # =============================================================================
-# Entete du tableau
+# Entête du tableau
 # =============================================================================
 
 Label(frame_base_titre, text="Entier Converti", font="Abadi 15 bold",

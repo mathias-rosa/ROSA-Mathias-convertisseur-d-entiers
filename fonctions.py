@@ -5,9 +5,10 @@ ROSA Mathias
 Devoir maison d'informatique
 Convertisseur d’entiers : Octobre 2021
 
-Fonctions
+module : fonctions.py
 """
 
+# Import de "l'objet" Pile.
 from Piles import Créer_Pile, Empiler, Dépiler, Pile_Vide, Longueur
 
 
@@ -19,7 +20,8 @@ def chiffre_vers_b10(chiffre):
     Retourne :
         - un chiffre de la base 10 : int
 
-    Permet de convertir un nombre en chiffre de la base 10
+    Permet de convertir un chiffre d'une base autre que 10 <= 16 sous forme de str
+    en un nombre de la base 10 sous forme de int.
     """
 
     table = ["A", "B", "C", "D", "E", "F"]
@@ -106,7 +108,6 @@ def verifier(entier, base):
 
     Cette fonction sert à vérifier qu'un nombre est bien écrit dans une
     certaine base parmi (2, 5, 10, 16)
-
     """
     liste_chiffres = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
                       "A", "B", "C", "D", "E", "F"]
