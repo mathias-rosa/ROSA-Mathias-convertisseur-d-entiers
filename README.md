@@ -1,6 +1,6 @@
 # ROSA-Mathias-convertisseur-d-entiers
 
-Dans ce projet on a pu créer un convertisseurs d'entiers entre les bases 2, 5, 10, 16.
+Dans ce projet on a pu créer un convertisseurs d'entiers entre les bases 2, 5, 10 et 16.
 Afin de lancer le projet, veuillez exécuter le fichier **run.py**
 
 ## interface_graphique.py
