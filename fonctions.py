@@ -89,7 +89,7 @@ def convertir_dp_b10(entier, base):
         entier = entier // base
 
     nombre_converti = ""
-    while not Pile_Vide(pile_reste):  # Il reste des nombres à convertir
+    while not Pile_Vide(pile_reste):
         nombre_converti += Dépiler(pile_reste)
 
     return nombre_converti

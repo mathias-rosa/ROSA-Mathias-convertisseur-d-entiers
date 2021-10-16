@@ -200,7 +200,9 @@ bouton_convertir.pack(side="right")
 # =============================================================================
 
 fenetre.geometry("320x550")
+fenetre.minsize(320, 550)
 fenetre.title("Convertiseur d'entiers")
+fenetre.iconbitmap('logo.ico')
 
 
 if __name__ == "__main__":

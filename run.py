@@ -28,11 +28,13 @@ def convertir():
     # On enlève un eventuel ancien message d'erreur
     frame_err.pack_forget()
     # On récupère l'entier depuis l'entrée utilisateur
-    entier = texte_entree.get()
+    # On utilise la méthode upper prendre en charge le cas ou l'utilisateur
+    # utilise une
+    entier = texte_entree.get().upper()
 
     # Les deux derniers caractères de var_bases.get() correspondent au numéro
     # de la base
-    base = int(var_bases.get()[-2:])
+    base = int(var_bases.get()[5:])
 
     if not verifier(entier, base):
         #  On enlève le bouton convertir afin de faire de la place pour le
@@ -42,41 +44,22 @@ def convertir():
         frame_err.pack(fill="x")
         # On remet le bouton convertir.
         bouton_convertir.pack(side="right")
+        # On retourne un message d'erreur afin de ne pas continuer la
+        # conversion.
         return "Erreur : chiffre interdit"
 
-    if base == 2:
+    # On convertit vers la base 10 si la base de départ n'est pas la base 10
+    if base != 10:
+        entier = convertir_vers_b10(entier, base)
+    else:
+        entier = int(entier)
 
-        entier_b10 = convertir_vers_b10(entier, 2)
+    # On convertit depuis la base 10 vers toutes les autres bases
+    base_deux.set(convertir_dp_b10(entier, 2))
+    base_cinq.set(convertir_dp_b10(entier, 5))
+    base_dix.set(entier)
+    base_seize.set(convertir_dp_b10(entier, 16))
 
-        base_deux.set(entier)
-        base_cinq.set(convertir_dp_b10(entier_b10, 5))
-        base_dix.set(entier_b10)
-        base_seize.set(convertir_dp_b10(entier_b10, 16))
-
-    elif base == 5:
-
-        entier_b10 = convertir_vers_b10(entier, 5)
-
-        base_deux.set(convertir_dp_b10(entier_b10, 2))
-        base_cinq.set(entier)
-        base_dix.set(entier_b10)
-        base_seize.set(convertir_dp_b10(entier_b10, 16))
-
-    elif base == 10:
-
-        base_deux.set(convertir_dp_b10(int(entier), 2))
-        base_cinq.set(convertir_dp_b10(int(entier), 5))
-        base_dix.set(entier)
-        base_seize.set(convertir_dp_b10(int(entier), 16))
-
-    elif base == 16:
-
-        entier_b10 = convertir_vers_b10(entier, 16)
-
-        base_deux.set(convertir_dp_b10(entier_b10, 2))
-        base_cinq.set(convertir_dp_b10(entier_b10, 5))
-        base_dix.set(entier_b10)
-        base_seize.set(entier)
 
 
 # On lie la fonction convertir au bouton "convertir" de l'interface graphique
