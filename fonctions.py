@@ -14,7 +14,7 @@ from Piles import Créer_Pile, Empiler, Dépiler, Pile_Vide, Longueur
 def chiffre_vers_b10(chiffre):
     """
     Prend en argument :
-        - un entier dans une base parmis (2, 5, 10, 16) : str
+        - un entier dans une base parmi (2, 5, 10, 16) : str
 
     Retourne :
         - un chiffre de la base 10 : int
@@ -38,7 +38,7 @@ def convertir_vers_b10(entier, base):
         - le nombre converti en base 10 : int
 
     Cette fonction sert à convertir un nombre en base 2 à un nombre en une
-    autre base parmis (2, 5, 10, 16)
+    autre base parmi (2, 5, 10, 16)
     """
     pile_entier = Créer_Pile()
 
@@ -69,7 +69,7 @@ def convertir_dp_b10(entier, base):
         - le nombre converti : str
 
     Cette fonction sert à convertir un nombre en base 10 à un nombre en une
-    autre base parmis (2, 5, 10, 16)
+    autre base parmi (2, 5, 10, 16)
     """
     # On traite en premier le cas ou l'entier est 0.
     if entier == 0:
@@ -105,7 +105,7 @@ def verifier(entier, base):
         - True si l'entier peut être écrit dans la base et False sinon
 
     Cette fonction sert à vérifier qu'un nombre est bien écrit dans une
-    certaine base parmis (2, 5, 10, 16)
+    certaine base parmi (2, 5, 10, 16)
 
     """
     liste_chiffres = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
