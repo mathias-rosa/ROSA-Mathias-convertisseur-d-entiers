@@ -32,8 +32,8 @@ def convertir():
     # rentre un entier en base 16 avec des minuscules
     entier = texte_entree.get().upper()
 
-    # Les deux derniers caractères de var_bases.get() correspondent au numéro
-    # de la base
+    # On supprime le mot Base dans "Base x" puis on convertit le x qui
+    # représente une base en int
     base = int(var_bases.get()[5:])
 
     if not verifier(entier, base):
